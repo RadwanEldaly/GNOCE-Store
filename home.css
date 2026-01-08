@@ -1,0 +1,654 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", Arial, sans-serif;
+  color: #111;
+  min-height: 100vh;
+  display: block;
+  flex-direction: column;
+}
+
+.back {
+  position: absolute;
+  top: 50px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+  filter: brightness(0.7);
+}
+
+/* == navbar == */
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 0;
+  background-color: white;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  animation: slideDown 0.6s ease-out;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 40px;
+}
+
+nav li {
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+nav li:hover {
+  transform: translateY(-3px);
+  color: #666;
+}
+
+/* == navbar end == */
+
+/* == main section == */
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+  padding: 0 40px;
+}
+
+.hero-content h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+  color: white;
+}
+.hero-content p {
+  font-size: 20px;
+  margin-bottom: 30px;
+  color: white;
+}
+.btn-primary {
+  padding: 15px 30px;
+  margin: 15px;
+  background-color: #c30000;
+  border-color: aliceblue;
+  color: white;
+  border-radius: 12px;
+  font-size: 18px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #a10000;
+  cursor: pointer;
+}
+
+/* == main section end == */
+/* Products */
+
+h2 {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 36px;
+  color: #000000;
+  padding: 20px 0;
+}
+.cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.card {
+  width: 300px;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 15px;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card h3 {
+  font-size: 22px;
+  color: rgb(0, 0, 0);
+}
+button {
+  border-radius: 10px;
+  border-color: #000000;
+  background-color: #ff0000;
+  color: #ffffff;
+  padding: 10px 13px;
+  margin: 10px;
+}
+img {
+  border-radius: 20px;
+}
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 30px rgba(255, 255, 255, 0.425);
+}
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+/* Products end */
+/* == Dicawind == */
+.dicawind {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 40px;
+  background-color: #f0f0f0;
+  margin-top: 70px;
+}
+.dicawind-content {
+  text-align: center;
+}
+.dicawind-content h2 {
+  font-size: 32px;
+  margin-bottom: 10px;
+  color: #333333;
+}
+.dicawind-content p {
+  font-size: 18px;
+  text-align: left;
+  margin-bottom: 30px;
+  color: #555555;
+}
+.dicawind-content .offer{
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 50%;
+  position: relative;
+  margin: 20px auto;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease
+}
+.dicawind-content .offer1,
+.dicawind-content .offer2,
+.dicawind-content .offer3{
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 50%;
+  position: relative;
+  margin: 20px auto;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease
+}
+
+.offer:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+.offer1:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+/* == Dicawind end == */
+
+/* == Discount Caption == */
+.discount-caption {
+  font-size: 20px;
+  color: #c30000;
+  margin-top: 30px;
+  margin-bottom: 40px;
+  padding: 25px;
+  text-align: center;
+  font-style: italic;
+  font-weight: 600;
+  background: linear-gradient(90deg, #ff6b6b, #c30000, #ff6b6b);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: fadeInUp 1s ease-out, shimmer 3s ease-in-out infinite;
+  border-top: 2px solid #ff6b6b;
+  border-bottom: 2px solid #ff6b6b;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes shimmer {
+  0%,
+  100% {
+    background-position: 0% center;
+  }
+  50% {
+    background-position: 100% center;
+  }
+}
+/* == Discount Caption end == */
+
+/* == Footer == */
+@keyframes slideInFromBottom {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes gradientShift {
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.footer {
+  background: linear-gradient(135deg, #000000 0%, #090059 50%, #0023bf 100%);
+  background-size: 200% 200%;
+  color: white;
+  padding: 40px 20px;
+  margin-top: 0;
+  width: 100%;
+  animation: slideInFromBottom 0.8s ease-out, gradientShift 8s ease infinite;
+  position: relative;
+  overflow: hidden;
+}
+
+.footer::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.1) 0%,
+    transparent 70%
+  );
+  animation: rotate 20s linear infinite;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.footer-content p {
+  font-size: 16px;
+  margin-bottom: 20px;
+  animation: fadeInUp 1s ease-out 0.3s both, float 3s ease-in-out infinite;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  animation: fadeInUp 1s ease-out 0.5s both;
+}
+
+.footer-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  position: relative;
+  padding: 8px 16px;
+  border-radius: 20px;
+}
+
+.footer-links a::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  transform: scale(0);
+  transition: transform 0.3s ease;
+}
+
+.footer-links a:hover::before {
+  transform: scale(1);
+}
+
+.footer-links a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 3px;
+  left: 50%;
+  background-color: white;
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.footer-links a:hover::after {
+  width: 80%;
+}
+
+.footer-links a:hover {
+  transform: translateY(-5px) scale(1.05);
+  text-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+/* == Footer end == */
+
+/* == Responsive Design == */
+
+/* Tablet devices (768px and below) */
+@media screen and (max-width: 768px) {
+  /* Navbar */
+  nav ul {
+    gap: 20px;
+    font-size: 14px;
+  }
+
+  /* Hero section */
+  .hero {
+    height: 60vh;
+    padding: 0 20px;
+  }
+
+  .hero-content h1 {
+    font-size: 32px;
+  }
+
+  .hero-content p {
+    font-size: 16px;
+  }
+
+  .btn-primary {
+    padding: 12px 24px;
+    font-size: 16px;
+  }
+
+  /* Products section */
+  h2 {
+    font-size: 28px;
+    padding: 100px 0 20px 0;
+  }
+
+  .cards {
+    padding: 20px;
+    gap: 15px;
+  }
+
+  .card {
+    width: 280px;
+  }
+
+  /* Discount section */
+  .dicawind {
+    padding: 0 20px;
+  }
+
+  .dicawind-content h2 {
+    font-size: 26px;
+  }
+
+  .dicawind-content .offer,
+  .dicawind-content .offer1 {
+    width: 70%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: relative;
+    margin: 10px auto;
+  }
+
+  .discount-caption {
+    font-size: 16px;
+    padding: 15px;
+  }
+
+  /* Footer */
+  .footer {
+    padding: 30px 15px;
+  }
+
+  .footer-links {
+    gap: 20px;
+  }
+
+  .footer-links a {
+    font-size: 13px;
+  }
+}
+
+/* Mobile devices (480px and below) */
+@media screen and (max-width: 480px) {
+  /* Navbar */
+  nav {
+    padding: 15px 0;
+  }
+
+  nav ul {
+    gap: 15px;
+    font-size: 12px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  nav li {
+    padding: 5px 10px;
+  }
+
+  /* Hero section */
+  .hero {
+    height: 50vh;
+    padding: 0 15px;
+  }
+
+  .hero-content h1 {
+    font-size: 24px;
+    margin-bottom: 15px;
+  }
+
+  .hero-content p {
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+
+  .btn-primary {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+
+  /* Products section */
+  h2 {
+    font-size: 22px;
+    padding: 80px 0 15px 0;
+  }
+
+  .cards {
+    padding: 15px;
+    height: auto;
+    gap: 20px;
+  }
+
+  .card {
+    width: 100%;
+    max-width: 320px;
+    margin: 0 auto;
+  }
+
+  .card h3 {
+    font-size: 18px;
+  }
+
+  button {
+    padding: 8px 10px;
+    font-size: 14px;
+  }
+
+  /* Discount section */
+  .dicawind {
+    padding: 0 15px;
+    margin-top: 40px;
+  }
+
+  .dicawind-content h2 {
+    font-size: 20px;
+    padding: 20px 0;
+  }
+
+  .dicawind-content .offer,
+  .dicawind-content .offer1 {
+    width: 90%;
+    margin: 15px auto;
+  }
+
+  .discount-caption {
+    font-size: 14px;
+    padding: 12px;
+    margin-top: 20px;
+  }
+
+  /* Footer */
+  .footer {
+    padding: 25px 10px;
+    margin-top: 40px;
+  }
+
+  .footer-content p {
+    font-size: 14px;
+    margin-bottom: 15px;
+  }
+
+  .footer-links {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .footer-links a {
+    font-size: 12px;
+    display: block;
+  }
+}
+
+/* Large tablets and small laptops (992px and below) */
+@media screen and (max-width: 992px) {
+  .cards {
+    justify-content: center;
+  }
+
+  .card {
+    width: 45%;
+    min-width: 250px;
+  }
+
+  .dicawind-content .offer,
+  .dicawind-content .offer1 {
+    width: 60%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: relative;
+    margin: 15px auto;
+  }
+}
+
+/* Extra small devices (360px and below) */
+@media screen and (max-width: 360px) {
+  .hero-content h1 {
+    font-size: 20px;
+  }
+
+  .hero-content p {
+    font-size: 12px;
+  }
+
+  h2 {
+    font-size: 18px;
+  }
+
+  .card {
+    width: 100%;
+  }
+
+  .dicawind-content h2 {
+    font-size: 18px;
+  }
+
+  .discount-caption {
+    font-size: 12px;
+  }
+}
+
+/* Landscape orientation adjustments */
+@media screen and (max-height: 600px) and (orientation: landscape) {
+  .hero {
+    height: 100vh;
+  }
+
+  .cards {
+    height: auto;
+  }
+}
+/* == Responsive Design end == */
